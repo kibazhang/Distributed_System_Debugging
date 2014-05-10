@@ -1,4 +1,4 @@
-ECE496_Distributed_System_Debugging
-===================================
+The source code for the local network simulator is in the "Local Network Simulator" folder.
 
-Source code for what I have done in ECE496
+In the "Testing for WC program" folder, it contains the code that I have changed for wc program and also some testing outputs 
+by running the Lancet debugging tool.
