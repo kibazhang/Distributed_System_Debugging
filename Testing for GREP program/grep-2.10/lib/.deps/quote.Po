@@ -1,0 +1,11 @@
+quote.o: quote.c ../config.h quotearg.h \
+  /home/bwzhou/klee/cloud9/src/third_party/llvm-build/Release+Asserts/bin/../lib/clang/3.1/include/stddef.h \
+  quote.h
+
+../config.h:
+
+quotearg.h:
+
+/home/bwzhou/klee/cloud9/src/third_party/llvm-build/Release+Asserts/bin/../lib/clang/3.1/include/stddef.h:
+
+quote.h:

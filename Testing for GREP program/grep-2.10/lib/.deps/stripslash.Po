@@ -1,0 +1,14 @@
+stripslash.o: stripslash.c ../config.h dirname.h \
+  /home/bwzhou/klee/cloud9/src/third_party/llvm-build/Release+Asserts/bin/../lib/clang/3.1/include/stdbool.h \
+  /home/bwzhou/klee/cloud9/src/third_party/llvm-build/Release+Asserts/bin/../lib/clang/3.1/include/stddef.h \
+  dosname.h
+
+../config.h:
+
+dirname.h:
+
+/home/bwzhou/klee/cloud9/src/third_party/llvm-build/Release+Asserts/bin/../lib/clang/3.1/include/stdbool.h:
+
+/home/bwzhou/klee/cloud9/src/third_party/llvm-build/Release+Asserts/bin/../lib/clang/3.1/include/stddef.h:
+
+dosname.h:

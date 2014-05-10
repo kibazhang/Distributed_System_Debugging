@@ -1,0 +1,62 @@
+diff -pur grep-2.10.old/src/main.c grep-2.10.new/src/main.c
+--- grep-2.10.old/src/main.c	2011-09-09 22:17:04.000000000 -0900
++++ grep-2.10.new/src/main.c	2014-05-10 10:52:27.000000000 -0900
+@@ -278,7 +278,7 @@ static struct exclude *included_patterns
+ static struct exclude *excluded_directory_patterns;
+ /* Short options.  */
+ static char const short_options[] =
+-"0123456789A:B:C:D:EFGHIPTUVX:abcd:e:f:hiKLlm:noqRrsuvwxyZz";
++"0123456789A:B:C:D:EFGHIPTUVX:abcd:e:f:hiKLlm:noqRrsuvwxY:yZz";
+ 
+ /* Non-boolean long options that have no corresponding short equivalents.  */
+ enum
+@@ -350,6 +350,7 @@ static struct option const long_options[
+   {"version", no_argument, NULL, 'V'},
+   {"with-filename", no_argument, NULL, 'H'},
+   {"word-regexp", no_argument, NULL, 'w'},
++  {"create-random-file", required_argument, NULL, 'Y'},
+   {0, 0, 0, 0}
+ };
+ 
+@@ -1769,6 +1770,8 @@ parse_grep_colors (void)
+                 "at remaining substring \"%s\""), p, q);
+ }
+ 
++int create_random_file = 0;
++
+ int
+ main (int argc, char **argv)
+ {
+@@ -2010,6 +2013,10 @@ main (int argc, char **argv)
+         match_lines = 1;
+         break;
+ 
++      case 'Y':
++        create_random_file = atoi(optarg);
++        break;
++
+       case 'Z':
+         filename_mask = 0;
+         break;
+@@ -2193,6 +2200,14 @@ main (int argc, char **argv)
+         do
+         {
+           char *file = argv[optind];
++          if (create_random_file > 0 && access(file, F_OK) == -1) {
++            FILE *fp = fopen(file, "w");
++            int i;
++            for (i = 0; i < create_random_file; ++i) {
++              fputs("0", fp);
++            }
++            fclose(fp);
++          }
+           if ((included_patterns || excluded_patterns)
+               && !isdir (file))
+             {
+Only in grep-2.10.new/src: main.o
+Only in grep-2.10.new/src: Makefile
+Only in grep-2.10.new/src: pcresearch.o
+Only in grep-2.10.new/src: searchutils.o
+Only in grep-2.10.new: stamp-h1
+Only in grep-2.10.new/tests: .deps
+Only in grep-2.10.new/tests: Makefile

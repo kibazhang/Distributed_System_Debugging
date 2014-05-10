@@ -1,0 +1,55 @@
+version-etc-fsf.o: version-etc-fsf.c ../config.h version-etc.h \
+  /home/bwzhou/klee/cloud9/src/third_party/llvm-build/Release+Asserts/bin/../lib/clang/3.1/include/stdarg.h \
+  /usr/include/stdio.h /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/bits/predefs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /home/bwzhou/klee/cloud9/src/third_party/llvm-build/Release+Asserts/bin/../lib/clang/3.1/include/stddef.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/libio.h \
+  /usr/include/_G_config.h wchar.h /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h
+
+../config.h:
+
+version-etc.h:
+
+/home/bwzhou/klee/cloud9/src/third_party/llvm-build/Release+Asserts/bin/../lib/clang/3.1/include/stdarg.h:
+
+/usr/include/stdio.h:
+
+/usr/include/features.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/x86_64-linux-gnu/bits/predefs.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/home/bwzhou/klee/cloud9/src/third_party/llvm-build/Release+Asserts/bin/../lib/clang/3.1/include/stddef.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+wchar.h:
+
+/usr/include/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
